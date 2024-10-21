@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/require-await */
 /* eslint-disable @typescript-eslint/promise-function-async */
 import { UserRepository } from '../ports/user-repostirory'
 import { UserData } from '../user-data'
@@ -26,8 +27,8 @@ export class InMemoryUserRepository implements UserRepository {
     return null
   }
 
-  findAllUsers (): Promise<UserData[]> {
-    throw new Error('Method not implemented.')
+  async findAllUsers (): Promise<UserData[]> {
+    return this.repository
   }
 
   async exists (user: UserData): Promise<boolean> {
