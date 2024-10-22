@@ -5,10 +5,10 @@ import { InvalidEmailError } from './errors/invalid-email-error'
 
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
 export class Email {
-  private readonly email: string
+  private readonly value: string
 
   private constructor (email: string) {
-    this.email = email
+    this.value = email
   }
 
   static create (email: string): Either<InvalidEmailError, Email> {
