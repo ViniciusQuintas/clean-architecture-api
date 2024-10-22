@@ -26,7 +26,7 @@ describe('Email validation', () => {
     expect(Email.validate(email)).toBeFalsy()
   })
 
-  test('should not accept local part larger then 64n chars', () => {
+  test('should not accept local part larger then 64 chars', () => {
     const email = `${'l'.repeat(65)}@mail.com`
     expect(Email.validate(email)).toBeFalsy()
   })
@@ -38,6 +38,11 @@ describe('Email validation', () => {
 
   test('should not accept empty domain part', () => {
     const email = 'any@'
+    expect(Email.validate(email)).toBeFalsy()
+  })
+
+  test('should not accept domain with a part then 64 chars', () => {
+    const email = `any@${'d'.repeat(64)}.com`
     expect(Email.validate(email)).toBeFalsy()
   })
 })
