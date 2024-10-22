@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { UserData } from './user-data'
+import { UserData } from '../../entities/user-data'
 
 describe('Register user on mailing list', () => {
   test('should add user with complete data to mailing list', () => {
