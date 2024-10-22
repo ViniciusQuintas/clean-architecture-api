@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/strict-boolean-expressions */
 /* eslint-disable @typescript-eslint/no-extraneous-class */
 import { Either, left, right } from '../shared/either'
 import { InvalidNameError } from './errors/invalid-name-error'
