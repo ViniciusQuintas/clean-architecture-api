@@ -5,7 +5,7 @@ import { InvalidEmailError } from './errors/invalid-email-error'
 
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
 export class Email {
-  private readonly value: string
+  public readonly value: string
 
   private constructor (email: string) {
     this.value = email
