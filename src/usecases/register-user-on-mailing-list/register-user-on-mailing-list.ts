@@ -1,10 +1,8 @@
 /* eslint-disable @typescript-eslint/promise-function-async */
-import { InvalidEmailError } from '../../entities/errors/invalid-email-error'
-import { InvalidNameError } from '../../entities/errors/invalid-name-error'
-import { User } from '../../entities/user'
-import { UserData } from '../../entities/user-data'
-import { Either, left, right } from '../../shared/either'
-import { UserRepository } from './ports/user-repostirory'
+import { InvalidEmailError, InvalidNameError } from '../../entities/errors/'
+import { User, UserData } from '../../entities/'
+import { Either, left, right } from '../../shared/'
+import { UserRepository } from './ports/'
 
 export class RegisterUserOrMailingList {
   private readonly userRepo: UserRepository
