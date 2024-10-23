@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { InvalidEmailError } from '../../entities/errors/invalid-email-error'
+import { InvalidNameError } from '../../entities/errors/invalid-name-error'
 import { UserData } from '../../entities/user-data'
 import { left } from '../../shared/either'
 import { UserRepository } from './ports/user-repostirory'
@@ -29,5 +30,17 @@ describe('Register user on mailing list', () => {
     const user = await repo.findUserByEmail(invalidemail)
     expect(user).toBeNull()
     expect(response).toEqual(left(new InvalidEmailError()))
+  })
+
+  test('should not add user with invalid name to mailing list', async () => {
+    const users: UserData[] = []
+    const repo: UserRepository = new InMemoryUserRepository(users)
+    const usecase: RegisterUserOrMailingList = new RegisterUserOrMailingList(repo)
+    const invalidname = ''
+    const email = 'any@mail.com'
+    const response = await usecase.registerUserOrMailingList({ name: invalidname, email: email })
+    const user = await repo.findUserByEmail(email)
+    expect(user).toBeNull()
+    expect(response).toEqual(left(new InvalidNameError()))
   })
 })
