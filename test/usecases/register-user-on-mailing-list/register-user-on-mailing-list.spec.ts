@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { UserData } from '../../../src/entities/user-data'
-import { UserRepository } from '../../../src/usecases/register-user-on-mailing-list/ports/user-repostirory'
-import { RegisterUserOrMailingList } from '../../../src/usecases/register-user-on-mailing-list/register-user-on-mailing-list'
-import { InMemoryUserRepository } from './repository/in-memory-user-repository'
+import { UserData } from '@/entities/user-data'
+import { UserRepository } from '@/usecases/register-user-on-mailing-list/ports/user-repostirory'
+import { RegisterUserOrMailingList } from '@/usecases/register-user-on-mailing-list/register-user-on-mailing-list'
+import { InMemoryUserRepository } from '@test/usecases/register-user-on-mailing-list/repository'
 
 describe('Register user on mailing list', () => {
   test('should add user with complete data to mailing list', async () => {

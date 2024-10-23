@@ -6,6 +6,10 @@ const jestConfig: JestConfigWithTsJest = {
   transform: {
     ...createDefaultPreset().transform
     // [...]
+  },
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/src/$1',
+    '^@test/(.*)$': '<rootDir>/test/$1'
   }
 }
 

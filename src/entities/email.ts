@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-extraneous-class */
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
-import { Either, right, left } from '../shared/'
-import { InvalidEmailError } from './errors/'
+import { Either, right, left } from '@/shared'
+import { InvalidEmailError } from '@/entities/errors/'
 
 export class Email {
   public readonly value: string

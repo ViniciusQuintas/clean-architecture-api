@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
 /* eslint-disable @typescript-eslint/no-extraneous-class */
-import { Either, left, right } from '../shared/'
-import { InvalidNameError } from './errors/'
+import { Either, left, right } from '@/shared/'
+import { InvalidNameError } from '@/entities/errors/'
 
 export class Name {
   public readonly value: string

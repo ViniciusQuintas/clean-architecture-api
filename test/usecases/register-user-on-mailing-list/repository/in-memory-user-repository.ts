@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
 /* eslint-disable @typescript-eslint/promise-function-async */
-import { UserRepository } from '../../../../src/usecases/register-user-on-mailing-list/ports/'
-import { UserData } from '../../../../src/entities/'
+import { UserRepository } from '@/usecases/register-user-on-mailing-list/ports/'
+import { UserData } from '@/entities/'
 
 export class InMemoryUserRepository implements UserRepository {
   private readonly repository: UserData[]

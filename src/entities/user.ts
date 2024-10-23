@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-extraneous-class */
-import { Either, left, right } from '../shared/'
-import { InvalidEmailError, InvalidNameError } from './errors/'
-import { UserData, Name, Email } from './'
+import { Either, left, right } from '@/shared/'
+import { InvalidEmailError, InvalidNameError } from '@/entities/errors/'
+import { UserData, Name, Email } from '@/entities'
 
 export class User {
   public readonly name: Name
