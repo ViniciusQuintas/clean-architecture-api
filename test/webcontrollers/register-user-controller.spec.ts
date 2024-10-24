@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/promise-function-async */
 import { UserData } from '@/entities'
 import { InvalidEmailError, InvalidNameError } from '@/entities/errors'
 import { UseCase } from '@/usecases/ports'
@@ -58,36 +59,36 @@ describe('Sign up web controller', () => {
   })
 
   test('should return status code 400 when request is missing user name', async () => {
-    const requestWithInvalidName: HttpRequest = {
+    const requestMissingName: HttpRequest = {
       body: {
         email: 'any@mail.com'
       }
     }
-    const response: HttpResponse = await controller.handle(requestWithInvalidName)
+    const response: HttpResponse = await controller.handle(requestMissingName)
     expect(response.statusCode).toEqual(400)
     expect(response.body).toBeInstanceOf(MissingParamError)
     expect((response.body as Error).message).toEqual('Missing parameter from request: name')
   })
 
   test('should return status code 400 when request is missing user email', async () => {
-    const requestWithInvalidName: HttpRequest = {
+    const requestMissingEmail: HttpRequest = {
       body: {
         name: 'Any name'
       }
     }
-    const response: HttpResponse = await controller.handle(requestWithInvalidName)
+    const response: HttpResponse = await controller.handle(requestMissingEmail)
     expect(response.statusCode).toEqual(400)
     expect(response.body).toBeInstanceOf(MissingParamError)
     expect((response.body as Error).message).toEqual('Missing parameter from request: email')
   })
 
   test('should return status code 400 when request is missing user name and email', async () => {
-    const requestWithInvalidName: HttpRequest = {
+    const requestMissingNameAndEmail: HttpRequest = {
       body: {
 
       }
     }
-    const response: HttpResponse = await controller.handle(requestWithInvalidName)
+    const response: HttpResponse = await controller.handle(requestMissingNameAndEmail)
     expect(response.statusCode).toEqual(400)
     expect(response.body).toBeInstanceOf(MissingParamError)
     expect((response.body as Error).message).toEqual('Missing parameter from request: name email')
