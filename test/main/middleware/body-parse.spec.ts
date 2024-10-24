@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-misused-promises */
 import request from 'supertest'
 import app from '@/main/config/app'
 
@@ -9,7 +10,7 @@ describe('Body parser middleware', () => {
 
     await request(app)
       .post('/test_body_parser')
-      .send({ name: 'Vinícius' })
-      .expect({ name: 'Vinícius' })
+      .send({ name: 'vinicius' })
+      .expect({ name: 'vinicius' })
   })
 })
