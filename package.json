@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "build": "rimraf dist && tsc -p tsconfig-build.json",
     "test": "jest --watchAll"
   },
   "keywords": [],
@@ -34,5 +35,8 @@
   "dependencies": {
     "express": "^4.21.1",
     "module-alias": "^2.2.3"
+  },
+  "_moduleAliases": {
+    "@": "dist"
   }
 }
