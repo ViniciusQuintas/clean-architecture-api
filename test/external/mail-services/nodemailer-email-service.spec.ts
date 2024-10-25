@@ -20,7 +20,7 @@ const attachments = [{
   contentType: 'text/plain'
 }]
 
-var mailOptions: EmailOptions = {
+const mailOptions: EmailOptions = {
   host: 'any_host',
   port: 867,
   username: 'any_username',
