@@ -10,7 +10,8 @@ const jestConfig: JestConfigWithTsJest = {
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
     '^@test/(.*)$': '<rootDir>/test/$1'
-  }
+  },
+  preset: '@shelf/jest-mongodb'
 }
 
 export default jestConfig
