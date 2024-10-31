@@ -2,7 +2,7 @@
 
 Esta API foi desenvolvida em TypeScript, implementando conceitos de **Clean Architecture**, **Test-Driven Development (TDD)**, **Refatoração Contínua** e **Commits Atômicos**. O projeto é estruturado de maneira modular, visando escalabilidade e manutenibilidade.
 
-A arquitetura é baseada nos princípios de Clean Architecture, separando as responsabilidades em camadas independentes para facilitar a expansão, a reutilização de componentes e a integração com diferentes interfaces de usuário.
+A arquitetura é baseada nos princípios de Clean Architecture, separando as responsabilidades em camadas independentes para facilitar a expansão, a reutilização de componentes e a integração com diferentes interfaces de usuário. 
 
 ## Tecnologias Utilizadas
 
